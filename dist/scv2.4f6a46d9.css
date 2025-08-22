@@ -1,0 +1,68 @@
+:root {
+  --companies-text: #0b1d39;
+  --transition: .3s ease;
+  --border-radius: 8px;
+  --white: #fff;
+}
+
+.companies {
+  background: var(--companies-bg);
+  color: var(--companies-text);
+  padding: 4rem 0;
+}
+
+.companies .section-header h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-header h2 {
+  color: #090909;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.companies-scroll {
+  overflow: hidden;
+}
+
+.companies-track {
+  align-items: center;
+  gap: 3rem;
+  animation: 30s linear infinite scroll;
+  display: flex;
+}
+
+.company-logo {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 150px;
+  padding: .75rem;
+  display: flex;
+}
+
+.company-logo img {
+  object-fit: contain;
+  filter: none;
+  max-width: 100%;
+  max-height: 100%;
+  transition: filter var(--transition);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/*# sourceMappingURL=scv2.4f6a46d9.css.map */

@@ -1,0 +1,14 @@
+@media (max-width: 980px){
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .banner-container{
+        flex-direction: column;
+    }
+
+}
+@media (width <= 576px) {
+    .why-grid, .card-grid
+ {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+
+}

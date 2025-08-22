@@ -1,0 +1,38 @@
+.container h3,h2{
+ font-weight: bold;
+ font-size: 18px;     /* Optional: make title stand out */
+    margin-bottom: 4px;
+    color: #000;
+}
+.card-img {
+  width: 100%;
+  height: 180px; /* same height for all cards */
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  margin-bottom: 10px; /* space between image and text */
+}
+
+.img-eda {
+  background-image: url("./../assets/img/asic.jpg");
+}
+
+.img-layout {
+  background-image: url("./../assets/img/analog_img.jpg");
+}
+
+.img-fpga {
+  background-image: url("./../assets/img/fpga.jpg");
+}
+
+.img-embedded {
+  background-image: url("./../assets/img/embedded_img.jpg");
+}
+
+.img-analog {
+  background-image: url("./../assets/img/physical_design.jpg");
+}
+
+.img-layout2 {
+  background-image: url("./../assets/img/analog_layout.jpg");
+}

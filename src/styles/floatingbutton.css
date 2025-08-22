@@ -1,0 +1,21 @@
+
+.quick-contact{
+
+    position: fixed; bottom: 20px; right: 20px; z-index: 999;
+}
+
+.btn.whatsapp {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn.whatsapp dotlottie-wc {
+  width: 80%;   /* play with this */
+  height: 80%;
+}

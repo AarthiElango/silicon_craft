@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.banner-section {
+  color: #fff;
+  transition: background .5s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-container {
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  display: flex;
+}
+
+.banner-left {
+  align-items: center;
+  gap: 1.5rem;
+  display: flex;
+}
+
+.banner-icon {
+  backdrop-filter: blur(5px);
+  background: #fff3;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  display: flex;
+}
+
+.banner-icon svg {
+  fill: #fff;
+  width: 36px;
+  height: 36px;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+
+  40% {
+    transform: scale(1.25);
+  }
+
+  70% {
+    transform: scale(.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pop-animate svg {
+  animation: .5s pop;
+}
+
+.banner-info h3 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.banner-info p {
+  opacity: .85;
+  margin: .5rem 0 0;
+}
+
+.banner-btn {
+  color: #000;
+  cursor: pointer;
+  background: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: .75rem 1.5rem;
+  transition: background .3s;
+}
+
+.banner-btn:hover {
+  background: #eee;
+}
+
+.banner-dot-container {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.banner-dot {
+  cursor: pointer;
+  background: #fff6;
+  border: none;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
+.banner-dot.active {
+  background: #fff;
+}
+
+.fade-in {
+  animation: .8s ease-in-out fadeIn;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ms-hero__background {
+  z-index: 1;
+  background-color: #0000;
+  background-position: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+/*# sourceMappingURL=scv2.fb4353ff.css.map */

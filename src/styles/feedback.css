@@ -1,0 +1,153 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f9fafb;
+  margin: 0;
+  padding: 0;
+}
+
+.reviews {
+  padding: 80px 20px;
+  background: #f9fafb;
+  overflow: hidden;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.section-header .section-desc {
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  overflow:unset;
+  
+}
+
+.slider-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-1920px); /* adjust based on card width * number of cards */
+  }
+}
+
+.p-6 {
+  flex: 0 0 320px;
+  background: #fff;
+  padding: 24px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  
+}
+
+.flex {
+  display: flex;
+  margin-bottom: 12px;
+  color: #510a1f;
+}
+
+.stars span {
+  font-size: 18px;
+}
+
+.review {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.student {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  background: #e5e7eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  font-size: 20px;
+  color: #6b7280;
+}
+
+.student-info h4 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.student-info p {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 2px 0;
+}
+
+.badge {
+  display: inline-block;
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+.fade-left, .fade-right {
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.fade-left {
+  left: 0;
+  background: linear-gradient(to right, #f9fafb, transparent);
+}
+
+.fade-right {
+  right: 0;
+  background: linear-gradient(to left, #f9fafb, transparent);
+}
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.container, .section, .wrapper {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0;
+  padding: 0;
+}
+
+
+/*css for new co*/

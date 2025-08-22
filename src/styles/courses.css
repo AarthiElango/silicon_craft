@@ -1,0 +1,17 @@
+.page-hero{
+    :root {
+    --navy: #0b1d39;
+    --navy-deep: #050b1a;
+    --maroon: #8b1e3f;
+    --maroon-dark: #701731;
+    --maroon-glow: #c73659;
+    --light: #f8f9fb;
+    --white: #ffffff;
+    --text: #1d2433;
+    --muted: #4b5565;
+    --card: #ffffff;
+    --card-dark: #1a1f2c;
+    --bluegrey: #101b2d;
+    --shadow: 0 10px 30px rgba(11, 29, 57, 0.12);
+}
+}
