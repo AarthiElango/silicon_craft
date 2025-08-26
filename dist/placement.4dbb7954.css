@@ -1,0 +1,68 @@
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    & h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    & h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    & h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    & h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    & p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    & label, & button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    & input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+.py-16 {
+  padding-block: calc(var(--spacing) * 16);
+  flex-direction: column;
+  display: flex;
+}
+
+.px-6 {
+  padding-inline: calc(var(--spacing) * 6);
+}
+
+.bg-gray-50 {
+  background-color: var(--color-gray-50);
+}
+
+.hero-bg {
+  background: linear-gradient(-45deg, var(--navy), var(--maroon), var(--navy));
+}
+
+.hero-card p {
+  color: #000;
+}
+/*# sourceMappingURL=placement.4dbb7954.css.map */

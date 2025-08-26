@@ -18,8 +18,8 @@ body {
 }
 
 .banner-left {
-  align-items: center;
   gap: 1.5rem;
+  padding-left: 10%;
   display: flex;
 }
 

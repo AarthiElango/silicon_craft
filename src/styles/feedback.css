@@ -1,153 +1,283 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f9fafb;
+/* CSS Variables - Using your design system tokens */
+:root {
+  --font-size: 14px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --muted-foreground: #717182;
+  --border: rgba(0, 0, 0, 0.1);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --radius: 0.625rem;
+  
+  /* Custom text sizes matching your Tailwind setup */
+  --text-4xl: 2.25rem;
+  --text-3xl: 1.875rem;
+  --text-xl: 1.25rem;
+  --text-lg: 1.125rem;
+  --text-base: 1rem;
+  --text-sm: 0.875rem;
+}
+
+/* Base reset and typography */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.reviews {
-  padding: 80px 20px;
-  background: #f9fafb;
-  overflow: hidden;
+html {
+  font-size: var(--font-size);
 }
 
-.section-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.section-header h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.section-header .section-desc {
-  color: #6b7280;
-  max-width: 600px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-}
-
-.slider {
-  position: relative;
-  width: 100%;
-  overflow:unset;
-  
-}
-
-.slider-track {
-  display: flex;
-  gap: 20px;
-  width: max-content;
-  animation: scroll 30s linear infinite;
-}
-
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-1920px); /* adjust based on card width * number of cards */
-  }
-}
-
-.p-6 {
-  flex: 0 0 320px;
-  background: #fff;
-  padding: 24px;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  
-}
-
-.flex {
-  display: flex;
-  margin-bottom: 12px;
-  color: #510a1f;
-}
-
-.stars span {
-  font-size: 18px;
-}
-
-.review {
-  font-size: 14px;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
   line-height: 1.5;
-  margin-bottom: 20px;
 }
 
-.student {
+/* Testimonials Section */
+
+.testimonials-section {
+  width: 100%;
+  /* light gray background */
+  padding: 2rem 0;          /* add some spacing */
+  height: auto;             /* let it grow with content */
+}
+
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 3rem; /* 48px */
+}
+
+.testimonials-title {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-weight-medium);
+  color: var(--foreground);
+  margin-bottom: 1rem; /* 16px */
+  line-height: 1.5;
+}
+
+.testimonials-subtitle {
+  font-size: var(--text-lg);
+  color: var(--muted-foreground);
+  max-width: 42rem; /* 672px */
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Carousel Container */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.carousel-track {
+  display: flex;
+  transition: none;
+  width: fit-content;
+  will-change: transform;
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+  flex-shrink: 0;
+  width: 24rem; /* 384px */
+  height: 500px; /* 320px */
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 1.5rem; /* 24px */
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.testimonial-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Stars */
+.stars-container {
+  display: flex;
+  gap: 0.25rem; /* 4px */
+  margin-bottom: 1rem; /* 16px */
+}
+
+.star {
+  width: 1rem; /* 16px */
+  height: 1rem; /* 16px */
+  color: #d1d5db; /* gray-300 */
+}
+
+.star-filled {
+  color: #fbbf24; /* yellow-400 */
+  fill: #fbbf24;
+}
+
+.star-empty {
+  color: #d1d5db;
+  fill: none;
+}
+
+/* Testimonial Content */
+/* Testimonial Content - Show all text */
+.testimonial-content {
+  color: #374151; /* gray-700 */
+  margin-bottom: 1.5rem; /* 24px */
+  line-height: 1.6;
+  flex: 1;
+  font-size: var(--text-base);
+  font-weight: var(--font-weight-normal);
+  overflow: visible;        /* allow full content */
+  display: block;           /* remove line clamping */
+  -webkit-line-clamp: unset;
+  -webkit-box-orient: unset;
+}
+
+/* Student Info - Show full text */
+.student-name,
+.student-institute {
+  white-space: normal;      /* allow wrapping */
+  overflow: visible;
+  text-overflow: unset;
+}
+
+
+.testimonial-content::before {
+  content: '"';
+}
+
+.testimonial-content::after {
+  content: '"';
+}
+
+/* Student Info - Fixed at bottom */
+.student-info {
   display: flex;
   align-items: center;
+  gap: 0.75rem; /* 12px */
+  margin-top: auto;
+  padding-top: 1rem; /* 16px */
+  border-top: 1px solid #f3f4f6; /* gray-100 */
 }
 
 .avatar {
-  width: 48px;
-  height: 48px;
-  background: #e5e7eb;
+  width: 3rem; /* 48px */
+  height: 3rem; /* 48px */
   border-radius: 50%;
+  background: #dbeafe; /* blue-100 */
+  color: #1d4ed8; /* blue-700 */
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 12px;
-  font-size: 20px;
-  color: #6b7280;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--text-sm);
+  flex-shrink: 0;
 }
 
-.student-info h4 {
-  font-size: 14px;
-  margin: 0;
+.student-details {
+  flex: 1;
+  min-width: 0;
 }
 
-.student-info p {
-  font-size: 12px;
-  color: #6b7280;
-  margin: 2px 0;
-}
 
-.badge {
-  display: inline-block;
-  background: #f3f4f6;
-  color: #374151;
-  font-size: 12px;
-  padding: 2px 6px;
-  border-radius: 4px;
-  margin-top: 4px;
-}
-
-.fade-left, .fade-right {
+/* Gradient Overlays */
+.gradient-overlay-left {
   position: absolute;
   top: 0;
-  width: 80px;
-  height: 100%;
-  pointer-events: none;
-  z-index: 5;
-}
-
-.fade-left {
   left: 0;
+  width: 2rem; /* 32px */
+  height: 100%;
   background: linear-gradient(to right, #f9fafb, transparent);
+  pointer-events: none;
+  z-index: 10;
 }
 
-.fade-right {
+.gradient-overlay-right {
+  position: absolute;
+  top: 0;
   right: 0;
+  width: 2rem; /* 32px */
+  height: 100%;
   background: linear-gradient(to left, #f9fafb, transparent);
+  pointer-events: none;
+  z-index: 10;
 }
 
-
-body, html {
-  margin: 0;
-  padding: 0;
-  width: 100%;
+/* Pause Indicator */
+.pause-indicator {
+  text-align: center;
+  margin-top: 1.5rem; /* 24px */
 }
 
-.container, .section, .wrapper {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0;
-  padding: 0;
+.pause-indicator p {
+  font-size: var(--text-sm);
+  color: var(--muted-foreground);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.5;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonials-title {
+    font-size: var(--text-3xl);
+  }
+  
+  .testimonial-card {
+    width: 20rem; /* 320px */
+  }
+  
+  .testimonials-section {
+    padding: 3rem 1rem; /* 48px 16px */
+  }
+}
 
-/*css for new co*/
+@media (max-width: 480px) {
+  .testimonial-card {
+    width: 18rem; /* 288px */
+    height: 22rem; /* 352px - slightly taller for mobile */
+  }
+  
+  .testimonials-section {
+    padding: 2.5rem 0.75rem; /* 40px 12px */
+  }
+  
+  .testimonials-title {
+    font-size: var(--text-xl);
+  }
+  
+  .testimonials-subtitle {
+    font-size: var(--text-base);
+  }
+}
+
+/* Performance Optimizations */
+.carousel-track {
+  will-change: transform;
+}
+
+.testimonial-card {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Smooth scrolling for browsers that support it */
+@media (prefers-reduced-motion: no-preference) {
+  .carousel-track {
+    transform-style: preserve-3d;
+  }
+}
